@@ -58,6 +58,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/categories">分类</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -110,6 +112,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -130,7 +134,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/categories">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,6 +152,83 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-数值分析之解线性方程组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/23/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/">数值分析之解线性方程组</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/23/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-02-23T13:07:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+		
+
+			
+				<p><em>私以为数值分析这门课对于实际工程问题作用很大，故写下此篇文章</em></p>
+<p><img src="https://i.imgur.com/kDWMrNS.png" alt></p>
+<p>现实问题中经常会遇到需要解线性方程组的情况，因此对于计算机而言如何快速解决线性方程组问题是一个十分现实的问题。在下文的讨论中不考虑方程组系数矩阵不满秩的情况即方程组有解且其解唯一。</p>
+<h1 id="直接解法"><a href="#直接解法" class="headerlink" title="直接解法"></a>直接解法</h1><h2 id="Gauss消去法"><a href="#Gauss消去法" class="headerlink" title="Gauss消去法"></a>Gauss消去法</h2>
+			
+		
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/计算机数学基础//" class="article-tag-list-link color3">计算机数学基础</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/23/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E4%B9%8B%E8%A7%A3%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-如何搭建一个自己的博客网站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -166,43 +249,29 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <br>
+		
+
+					<br>
 
 <p><em>我选的是白嫖的github服务器，使用的是hexo框架下的博客，所以接下来我讲述如何通过github搭建自己的个人博客</em></p>
-<h2 id="事先准备工作"><a href="#事先准备工作" class="headerlink" title="事先准备工作"></a>事先准备工作</h2><ul>
-<li><p>下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs</a>,安装过程默认即可</p>
-</li>
-<li><p>使用命令行下载npm包管理器<br><code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code><br><em>在这里使用淘宝的npm镜像文件</em></p>
-</li>
-<li><p>使用cnpm安装hexo <code>cnpm install -g hexo-cli</code> 安装完成之后可以使用 <code>hexo v</code> 来进行验证</p>
-</li>
-</ul>
-<h2 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h2><p>在本地新建一个文件夹（以我自己为例，在d盘目录下新建文件夹为blog），以后的操作均在此文件夹里进行，如果发生预期之外的错误将次文件夹删除重来即可</p>
-<ul>
-<li><p>hexo初始化<br>初始化hexo：在你所创建的文件夹内打开命令行输入<br><code>hexo init</code><br>在初始化完成之后可以使用命令 <code>hexo s</code> （此命令全称为hexo sever,可用于本地测试），然后在浏览器输入localhost:4000,即可看见初始化的hexo框架，如不出意外可以看见一个默认的一篇文章hello world</p>
-</li>
-<li><p>撰写博客文章<br>使用命令<code>hexo - new&quot;文章名称&quot;</code><br>然后会发现在\source_posts下会有一篇你刚刚创建的文章文件”文章名称.md”然后编辑此文件（使用markdown语法书写博客）</p>
-</li>
-<li><p>重新生成并测试<br>使用<code>hexo g</code>（hexo generate）来重新生成<br>使用<code>hexo s</code>（hexo sever）进行本地测试</p>
-</li>
-</ul>
-<h2 id="上传至GitHub"><a href="#上传至GitHub" class="headerlink" title="上传至GitHub"></a>上传至GitHub</h2><ul>
-<li>在GitHub上新建仓库，命名为xxx.github.io（命名必须符合gitpage命名规则）</li>
-<li>安装git插件<br><code>cnpm install --save hexo-deployer-git</code></li>
-<li>修改配置文件<br>找到总目录下的_config.yml文件，打开并修改deploy条目<br>将type属性值改为git，新建repo条目，属性值为你GitHub仓库的ssh，新建branch条目，其属性值为master</li>
-<li>将本地文件部署到远端<br><code>hexo d</code></li>
-</ul>
-<p>此时大功告成，在浏览器输入网址xxx.github.io即可在Internet下访问你的个人博客。而至于要想博客界面美观等其他要求可以寻找主题，我推荐next主题和yilia主题</p>
-
-      
-
-      
+			
+		
     </div>
     <div class="article-info article-info-index">
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/个人博客//" class="article-tag-list-link color5">个人博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -255,8 +324,10 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+		
+
+			
+				<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -270,9 +341,8 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-      
-
-      
+			
+		
     </div>
     <div class="article-info article-info-index">
       
